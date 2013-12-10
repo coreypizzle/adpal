@@ -1,0 +1,178 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+ @font-face {
+	font-family: NexaBold;
+	src: url('<%= asset_path 'NexaBold.otf' %>');
+ }
+
+ @font-face {
+ 	font-family: NexaBold;
+	src: url('<%= asset_path 'NexaBold.otf' %>');
+ }
+
+body {
+	background-color: #e74c3c;
+	margin: 0;
+}
+
+.glob-con {
+	margin: 15px;
+}
+
+ .login_form {
+ 	width: 600px;
+ 	height: 240px;
+ 	top: 50%;
+ 	left: 50%;
+ 	margin-top: 0;
+ 	margin-left: -300px;
+ 	position: absolute;
+ }
+
+ .login_form input {
+ 	width: 600px;
+ 	height: 50px;
+ 	border: 0;
+ 	text-align: center;
+ 	border-radius: 10px;
+ 	outline: none;
+ 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+ 	margin: 0 0 10px 0;
+ 	font-size: 16px;
+ 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ }
+
+.login_form .small_btn {
+	width: 290px!important;
+	margin: 0 10px 0 0;
+	float: left;
+}
+
+.login_form .small_btn_right {
+	width: 290px;
+	margin: 0 0 0 10px;
+	float: right;
+	height: 50px;
+}
+
+.small_fix {
+	width: 100%!important;
+}
+
+.login_form a {
+	color: inherit;
+	text-decoration: none;
+ 	font-size: 16px;
+ 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+
+}
+
+.login_form .small_btn_right {
+	width: 290px;
+ 	height: 50px;
+ 	line-height: 50px;
+ 	border: 0;
+ 	text-align: center;
+ 	border-radius: 10px;
+ 	outline: none;
+ 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+ 	margin: 0 0 10px 0;
+ 	font-size: 16px;
+ 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	background-color: buttonface;
+ 	color: inherit;
+ 	text-decoration: none;
+}
+
+
+input.pointer {
+	cursor: pointer;
+}
+
+.middle_cen {
+	margin: 0 auto 0 auto;
+	float: none;
+	width: 290px;
+	height: 50px;
+}
+
+.shiw {
+	color: white;
+	font-family: NexaLight, Helvetica, Arial, sans-serif;
+	width: 800px;
+	margin-left: -400px; 
+	margin-top: -80px;
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+}
+
+.shiw h2 {
+	font-family: NexaBold, Helvetica, Arial, sans-serif;
+	text-align: center;
+	margin-top: 0 0 40px 0;
+}
+
+h1 {
+	color: white;
+	font-family: NexaBold, Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+}
+
+.adspace_grid {
+	width: 500px;
+	height: 200px;
+	background-color: white;
+	border: 2px solid #232323;
+	display: inline-block;
+	margin: 0 15px 0 0;
+}
+
+.text_info {
+	height: 25px;
+	text-transform: uppercase;
+	font-family: NexaLight;
+	text-align: center;
+}
+
+.bold {
+	font-family: NexaBold!important;
+}
+
+.navs {
+	color: black;
+	font-family: NexaLight;
+	text-transform: uppercase;
+	font-size: 20px;
+	width: auto;
+	float: right;
+	margin: 0 15px 0 0;
+}
+
+.navs a {
+	text-decoration: none;
+	color: black;
+}
+
+.navs a:hover {
+	font-family: NexaBold;
+}
+
+.header {
+	height: 100px;
+	line-height: 100px;
+	background-color: white;
+}

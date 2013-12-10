@@ -1,0 +1,21 @@
+<h1>Listing ads</h1>
+
+
+
+
+    <% @ads.each do |ad| %>
+    <div class="adspace_grid">
+      <%= image_tag ad.preview.url %>
+      <div class="text_info">
+      <span class="bold"><%= ad.title %></span> / 
+      <span class="bold">Contact : </span><%= ad.url %>
+      </div>
+    </div> 
+    <%= link_to 'Delete', ad, :method => :delete %> 
+    <% end %>
+
+
+<br>
+
+<%= link_to 'New Ad', new_ad_path %>
+
