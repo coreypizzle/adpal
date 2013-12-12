@@ -10,6 +10,11 @@
 
 <div class="header">
 	<div class="navs">
+		<%= link_to "Home", ads_path, :class => "ads_link" %>
+		<%= link_to 'New Ad', new_ad_path %>
+		<% if user_signed_in = false %>
+			<%= link_to "Sign In", new_user_session_path %>
+		<% end %>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
 		<% end %>

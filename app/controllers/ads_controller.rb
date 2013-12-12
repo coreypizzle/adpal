@@ -1,11 +1,11 @@
 class AdsController < ApplicationController
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /ads
   # GET /ads.json
   def index
     @ads = Ad.all
+    @ads_small = Ad
   end
 
   # GET /ads/1
@@ -25,7 +25,9 @@ class AdsController < ApplicationController
   # POST /ads
   # POST /ads.json
   def create
+    before_action :authenticate_user!
     @ad = Ad.new(ad_params)
+    @ad.user = current_user
 
     respond_to do |format|
       if @ad.save
@@ -55,10 +57,12 @@ class AdsController < ApplicationController
   # DELETE /ads/1
   # DELETE /ads/1.json
   def destroy
-    @ad.destroy
-    respond_to do |format|
-      format.html { redirect_to ads_url }
-      format.json { head :no_content }
+    if @ad.user = current_user
+      @ad.destroy
+      respond_to do |format|
+        format.html { redirect_to ads_url }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -70,6 +74,6 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.require(:ad).permit(:title, :url, images_attributes: [:preview])
+      params.require(:ad).permit(:title, :url, :preview)
     end
 end
