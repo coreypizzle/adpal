@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212171054) do
+ActiveRecord::Schema.define(version: 20131213171244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(version: 20131212171054) do
     t.string   "preview_content_type"
     t.integer  "preview_file_size"
     t.datetime "preview_updated_at"
-    t.string   "size"
     t.text     "info"
+    t.text     "location"
+    t.string   "size"
   end
 
   create_table "events", force: true do |t|

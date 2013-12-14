@@ -5,22 +5,70 @@
 }
 </style>
 
+<%= form_tag ads_path, :method => "get" do %>
+  <p>
+    <%= text_field_tag :search %>
+    <%= submit_tag "Search" %>
+  </p>
+<% end %>
+
+
+<% @ads_featured.each do |ad| %>
+  <div class="adspace_grid_f">
+    <div class="pic_sec_f">
+      <%= image_tag ad.preview.url(:featured) %>
+    </div>
+    <div class="text_info_f">
+      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
+      <p><%= truncate(ad.info, length: 90) %></p>
+      <span class="bold"><%= ad.location %></span></br>
+      <span class="bold"><%= ad.url %></span>
+
+    </div>
+    <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
+    <% end %>
+  </div> 
+<% end %>
 
 
 
 
-
-<% @ads.each do |ad| %>
+<% @ads_medium.each do |ad| %>
   <div class="adspace_grid">
     <div class="pic_sec">
       <%= image_tag ad.preview.url(:medium) %>
     </div>
     <div class="text_info">
-      <span class="bold"><%= ad.title %></span> / 
-      <span class="bold">Contact : </span><%= ad.url %>
+      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
+      <p><%= truncate(ad.info, length: 60) %></p>
+      <span class="bold"><%= ad.location %></span></br>
+      <span class="bold"><%= ad.url %></span>
+
     </div>
-  </div> 
-    <%= link_to 'Delete', ad, :method => :delete %> 
+    <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
     <% end %>
+  </div> 
+<% end %>
+
+<% @ads_small.each do |ad| %>
+  <div class="adspace_grid">
+    <div class="pic_sec">
+      <%= image_tag ad.preview.url(:medium) %>
+    </div>
+    <div class="text_info">
+      <span class="bold"><%= ad.title %></span></br>
+      <p><%= truncate(ad.info, length: 30) %></p>
+      <div class="right-text">
+        <span class="bold"><%= ad.location %></span></br>
+        <span class="bold"><%= ad.url %></span>
+      </div>
+    </div>
+    <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete %> 
+    <% end %>
+  </div> 
+<% end %>
 
 

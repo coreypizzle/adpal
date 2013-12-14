@@ -5,18 +5,27 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+    <script>
+    $(function(){
+      $("#slides").slidesjs({
+        width: 400,
+        height: 400
+      });
+    });
+  </script>
 </head>
 <body>
 
 <div class="header">
 	<div class="navs">
 		<%= link_to "Home", ads_path, :class => "ads_link" %>
-		<%= link_to 'New Ad', new_ad_path %>
-		<% if user_signed_in = false %>
-			<%= link_to "Sign In", new_user_session_path %>
-		<% end %>
+		<% if user_signed_in? %>
+      <%= link_to 'New Ad', new_ad_path %>
+    <% end %>
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+		<% else %>
+			<%= link_to "Sign In", new_user_session_path %>
 		<% end %>
 	</div>
 </div>

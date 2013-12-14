@@ -1,9 +1,17 @@
 <style type="text/css">
-.header {
-  display: none!important;
+h1 {
+  display: none;
+
+}
+a {
+  display: none;
+}
+
+.header a {
+  display: inline!important;
 }
 </style>
-
+<div class="new_ad new_ad_fix">
 <%= form_for @ad, :html => {:multipart => true} do |f| %>
   <% if @ad.errors.any? %>
     <div id="error_explanation">
@@ -19,17 +27,32 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
+    <%= f.text_field :title, :placeholder => "Title" %>
+  </div></br>
   <div class="field">
-    <span>Contact (URL, Mobile, Address)</span><br>
-    <%= f.text_field :url %>
-  </div>
+    <span>Contact (Phone, Mobile, Email, Website)</span><br>
+    <%= f.text_field :url, :placeholder => "Contact - Email / Address / Website" %>
+  </div></br>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :preview %>
+    <%= f.text_area :info, :placeholder => "Description of your ad. EG, great quality, professional, brand new. ", :class => "font_area_fix" %>
+  </div></br>
+  <div class="field">
+    <%= f.label :location %><br>
+    <%= f.text_field :location, :placeholder => "Location" %>
+  </div></br>
+  <div class="field">
+    <%= f.label :image %><span class="label"> (Recommended Image Size = 400x400 Pixels)</span><br>
+    <%= f.file_field :preview, :placeholder => "Image" %>
+  </div></br>
+  <div class="no_align">
+  <div class="field ra_button">
+    <%= f.radio_button(:size, "small") %><span>Small - £0.75 P/W</span></br>
+    <%= f.radio_button(:size, "medium") %><span>Standard - £1.50 P/W</span></br>
+    <%= f.radio_button(:size, "featured") %><span>Featured - £3.00 P/W</span></br>
+  </div> </br>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>

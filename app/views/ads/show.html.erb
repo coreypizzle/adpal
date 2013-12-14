@@ -1,15 +1,12 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
+<div class="white_box">
+<p class="bold title_show">
   <%= @ad.title %>
-        <%= image_tag @ad.preview.url %>
 </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @ad.url %>
-</p>
-
-<%= link_to 'Edit', edit_ad_path(@ad) %> |
+  <%= image_tag @ad.preview.url(:showpg), :class => "show_img" %></br>
+  <%= @ad.info %></br>
+  <span class="bold">Contact : </span><%= @ad.url %></br>
+  <span class="bold">Location : </span><%= @ad.location %>
+</div>
 <%= link_to 'Back', ads_path %>
