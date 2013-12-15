@@ -5,13 +5,11 @@
 }
 </style>
 
-<%= form_tag ads_path, :method => "get" do %>
+<%= form_tag ads_path, :method => :get do %>
   <p>
-    <%= text_field_tag :search %>
-    <%= submit_tag "Search" %>
-  </p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
 <% end %>
-
 
 <% @ads_featured.each do |ad| %>
   <div class="adspace_grid_f">

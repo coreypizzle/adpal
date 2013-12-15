@@ -4,10 +4,15 @@ class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
   def index
+    @search = Ad.search do 
+      fulltext params[:search]
+    end
+
+
     @ads = Ad.all
-    @ads_small = Ad.where(:size => 'small')
-    @ads_medium = Ad.where(:size => 'medium')
-    @ads_featured = Ad.where(:size => 'featured')
+    @ads_small = @search.results
+    @ads_medium = @search.results
+    @ads_featured = @search.results
     
   end
 

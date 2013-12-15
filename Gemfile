@@ -12,6 +12,8 @@ gem "mini_magick"
 
 gem 'devise'
 
+gem 'sunspot_rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -26,6 +28,8 @@ gem 'carrierwave'
 gem 'protected_attributes'
 
 gem 'paperclip'
+
+gem 'sunspot_solr'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
