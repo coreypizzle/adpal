@@ -31,7 +31,9 @@ gem 'protected_attributes'
 
 gem 'paperclip'
 
-gem 'sunspot_solr'
+group :development do
+	gem 'sunspot_solr'
+end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
