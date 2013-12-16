@@ -18,7 +18,12 @@
 
 <div class="header">
 	<div class="navs">
-		<%= link_to "Home", ads_path, :class => "ads_link" %>
+    <%= form_tag ads_path, :method => :get do %>
+  <p class="search_f">
+    <%= text_field_tag :search, params[:search], :class => "glow_f" %>
+    <%= submit_tag "Search", :name => nil, :class => "submit" %>
+<% end %>
+		<%= link_to "Home", ads_path + "?utf8=✓&search=Search+Here...", :class => "ads_link" %>
 		<% if user_signed_in? %>
       <%= link_to 'New Ad', new_ad_path %>
     <% end %>

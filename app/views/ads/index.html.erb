@@ -5,10 +5,43 @@
 }
 </style>
 
-<%= form_tag ads_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+
+
+<% @ads.each do |ad| %>
+<% if ad.size == "featured" %>
+  <div class="adspace_grid_f">
+    <div class="pic_sec_f">
+      <%= image_tag ad.preview.url(:featured) %>
+    </div>
+    <div class="text_info_f">
+      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
+      <p><%= truncate(ad.info, length: 90) %></p>
+      <span class="bold"><%= ad.location %></span></br>
+      <span class="bold"><%= ad.url %></span>
+
+    </div>
+    <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
+    <% end %>
+  </div> 
+<% end %>
+<% if ad.size == "medium" %>
+  <div class="adspace_grid">
+    <div class="pic_sec">
+      <%= image_tag ad.preview.url(:medium) %>
+    </div>
+    <div class="text_info">
+      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
+      <p><%= truncate(ad.info, length: 60) %></p>
+      <span class="bold"><%= ad.location %></span></br>
+      <span class="bold"><%= ad.url %></span>
+
+    </div>
+    <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
+    <% end %>
+  </div> 
+<% end %>
 <% end %>
 
 <% @ads_featured.each do |ad| %>

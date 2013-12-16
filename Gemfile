@@ -8,6 +8,8 @@ gem "cancan"
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'rails_12factor', group: :production
+
 gem "mini_magick"
 
 gem 'devise'
@@ -47,6 +49,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+ruby "1.9.3"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

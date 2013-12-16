@@ -1,6 +1,7 @@
 class AdsController < ApplicationController
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
 
+
   # GET /ads
   # GET /ads.json
   def index
@@ -9,10 +10,11 @@ class AdsController < ApplicationController
     end
 
 
-    @ads = Ad.all
-    @ads_small = @search.results
-    @ads_medium = @search.results
-    @ads_featured = @search.results
+
+    @ads = @search.results
+    @ads_small = Ad.where(:size => "small").order('created_at DESC')
+    @ads_medium = Ad.where(:size => "medium").order('created_at DESC')
+    @ads_featured = Ad.where(:size => "featured").order('created_at DESC')
     
   end
 

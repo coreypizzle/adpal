@@ -69,6 +69,30 @@ body {
  	line-height: 50px;
  }
 
+.search_f input {
+ 	width: 200px;
+ 	height: 30px;
+ 	border: 0;
+ 	text-align: center;
+ 	border-radius: 10px;
+ 	outline: none;
+ 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+ 	margin: 0 0 10px 0;
+ 	font-size: 16px;
+ 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	background-color: white;
+ 	line-height: 30px;
+ }
+
+ .search_f {
+ 	margin: 0;
+ }
+
+ .search_f .submit {
+ 	background: buttonface!important;
+ 	width: 100px!important;
+ }
+
  .new_ad textarea {
  	width: 600px;
  	height: 50px;
@@ -236,6 +260,14 @@ h1 {
 	text-transform: uppercase;
 	font-family: NexaLight;
 	margin-right: 10px;
+}
+
+.navs form {
+	display: inline-block!important;
+}
+
+.glow_f {
+	box-shadow: 0 0 10px #e74c3c!important;
 }
 
 .text_info_f {

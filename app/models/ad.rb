@@ -8,6 +8,6 @@ class Ad < ActiveRecord::Base
   validates :url, length: { maximum: 40 }
 
   searchable do
-  	text :title, :info, :size
+  	text :title, :info
   end
 end
