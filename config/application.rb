@@ -4,6 +4,8 @@ require 'rails/all'
 
 require 'carrierwave'
 
+config.assets.initialize_on_precompile = false
+
 
 
 # Require the gems listed in Gemfile, including any gems
