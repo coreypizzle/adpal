@@ -12,15 +12,7 @@
  *= require_tree .
  */
 
- @font-face {
-	font-family: NexaBold;
-	src: url('asset_path 'NexaBold.otf'');
- }
 
- @font-face {
- 	font-family: NexaBold;
-	src: url(' asset_path 'NexaBold.otf'');
- }
 
 body {
 	background-color: #e74c3c;
