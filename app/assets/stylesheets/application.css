@@ -14,12 +14,12 @@
 
  @font-face {
 	font-family: NexaBold;
-	src: url('<%= asset_path 'NexaBold.otf' %>');
+	src: url('asset_path 'NexaBold.otf'');
  }
 
  @font-face {
  	font-family: NexaBold;
-	src: url('<%= asset_path 'NexaBold.otf' %>');
+	src: url(' asset_path 'NexaBold.otf'');
  }
 
 body {
