@@ -5,7 +5,11 @@
 }
 </style>
 
-
+    <%= form_tag ads_path, :method => :get do %>
+  <p class="search_f">
+    <%= text_field_tag :search, params[:search], :class => "glow_f" %>
+    <%= submit_tag "Search", :name => nil, :class => "submit" %>
+<% end %>
 
 <% @ads.each do |ad| %>
 <% if ad.size == "featured" %>

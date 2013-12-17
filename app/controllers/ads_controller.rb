@@ -5,13 +5,7 @@ class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
   def index
-    @search = Ad.search do 
-      fulltext params[:search]
-    end
-
-
-
-    @ads = @search.results
+    @ads = Ad.search(params[:search])
     @ads_small = Ad.where(:size => "small").order('created_at DESC')
     @ads_medium = Ad.where(:size => "medium").order('created_at DESC')
     @ads_featured = Ad.where(:size => "featured").order('created_at DESC')
@@ -81,6 +75,6 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.require(:ad).permit(:title, :url, :preview, :location, :size, :info)
+      params.require(:ad).permit(:title, :url, :preview, :location, :size, :info, :search)
     end
 end
