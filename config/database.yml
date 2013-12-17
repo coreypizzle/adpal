@@ -56,5 +56,4 @@ production:
   encoding: unicode
   database: datalog_production
   pool: 5
-  username: postgres
-  password: Toad8900
+  password:
