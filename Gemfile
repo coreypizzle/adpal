@@ -25,8 +25,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'carrierwave'
 
-gem 'protected_attributes'
-
 gem 'paperclip'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
