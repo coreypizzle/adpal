@@ -5,7 +5,7 @@ class AdsController < ApplicationController
   # GET /ads
   # GET /ads.json
   def index
-    @ads = Ad.search(params[:search])
+    @ads = Ad.order('created_at DESC').search(params[:search])
     @ads_small = Ad.where(:size => "small").order('created_at DESC')
     @ads_medium = Ad.where(:size => "medium").order('created_at DESC')
     @ads_featured = Ad.where(:size => "featured").order('created_at DESC')
