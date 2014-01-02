@@ -1,65 +1,98 @@
 <style type="text/css">
 .ads_link {
-  font-family: NexaBold, Helvetica, Arial, sans-serif;
-  color: #e74c3c!important;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: white!important;
 }
 </style>
 
+<div class="welcome_box">
+  <p><strong><%= link_to "SmartAds", ads_path + "?utf8=✓&search=Search+Here..." %></strong> is a cheap and easy-to-use ad service,</br>
+    with ad prices from <strong>free</strong> to £1.50,</br>
+    what's there to lose?</br>
+    <strong><%= link_to "Post an ad now.", new_ad_path %></strong></p>
+</div>
 
+
+<div class="search_con">
+<h1>Search Results</h1>
+<div class="featured_container">
 <% @ads.each do |ad| %>
+
 <% if ad.size == "featured" %>
   <div class="adspace_grid_f">
     <div class="pic_sec_f">
       <%= image_tag ad.preview.url(:featured) %>
     </div>
     <div class="text_info_f">
-      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
-      <p><%= truncate(ad.info, length: 90) %></p>
-      <span class="bold"><%= ad.location %></span></br>
-      <span class="bold"><%= ad.url %></span>
-
+    <div class="text_title">
+      <span class="bold"><%= link_to truncate(ad.title, length: 26), ad, :class => "title" %></span></br>
     </div>
-    <% if can? :destroy, ad %>
+    <div class="extra_info_f">
+        <p><%= truncate(ad.info, length: 30) %></p>
+        <span class="bold"><%= ad.location %></span></br>
+        <span class="bold"><%= ad.url %></span>
+      </div>
+          <% if can? :destroy, ad %>
       <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
     <% end %>
+
+    </div>
+
   </div> 
 <% end %>
+
+<% end %></div>
+
+
+<% @ads.each do |ad| %>
 <% if ad.size == "medium" %>
   <div class="adspace_grid">
     <div class="pic_sec">
       <%= image_tag ad.preview.url(:medium) %>
     </div>
     <div class="text_info">
-      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
-      <p><%= truncate(ad.info, length: 60) %></p>
-      <span class="bold"><%= ad.location %></span></br>
-      <span class="bold"><%= ad.url %></span>
-
+      <div class="text_title">
+      <span class="bold"><%= link_to truncate(ad.title, length: 13), ad, :class => "title" %></span></br>
     </div>
-    <% if can? :destroy, ad %>
+    <div class="extra_info">
+      <p><%= truncate(ad.info, length: 15) %></p>
+      <span class="bold"><%= ad.location %></span></br>
+    </div>
+              <% if can? :destroy, ad %>
       <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
     <% end %>
+    </div>
   </div> 
 <% end %>
 <% end %>
+</div>
 
+<div class="ads_con">
+  <h1>Latest Ads</h1>
+<div class="featured_container">
 <% @ads_featured.each do |ad| %>
   <div class="adspace_grid_f">
     <div class="pic_sec_f">
       <%= image_tag ad.preview.url(:featured) %>
     </div>
     <div class="text_info_f">
-      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
-      <p><%= truncate(ad.info, length: 90) %></p>
-      <span class="bold"><%= ad.location %></span></br>
-      <span class="bold"><%= ad.url %></span>
-
-    </div>
-    <% if can? :destroy, ad %>
+      <div class="text_title">
+        <span class="bold"><%= link_to truncate(ad.title, length: 26), ad, :class => "title" %></span></br>
+      </div>
+      <div class="extra_info_f">
+        <p><%= truncate(ad.info, length: 30) %></p>
+        <span class="bold"><%= ad.location %></span></br>
+        <span class="bold"><%= ad.url %></span>
+      </div>
+          <% if can? :destroy, ad %>
       <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
     <% end %>
+    </div>
+
   </div> 
 <% end %>
+</div>
 
 
 
@@ -70,15 +103,19 @@
       <%= image_tag ad.preview.url(:medium) %>
     </div>
     <div class="text_info">
-      <span class="bold"><%= link_to ad.title, ad, :class => "title" %></span></br>
-      <p><%= truncate(ad.info, length: 60) %></p>
+      <div class="text_title">
+        <span class="bold"><%= link_to truncate(ad.title, length: 13), ad, :class => "title" %></span></br>
+     </div>
+     <div class="extra_info">
+      <p><%= truncate(ad.info, length: 15) %></p>
       <span class="bold"><%= ad.location %></span></br>
-      <span class="bold"><%= ad.url %></span>
-
     </div>
-    <% if can? :destroy, ad %>
+        <% if can? :destroy, ad %>
       <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
     <% end %>
+
+    </div>
+
   </div> 
 <% end %>
 
@@ -100,5 +137,7 @@
     <% end %>
   </div> 
 <% end %>
+
+</div>
 
 

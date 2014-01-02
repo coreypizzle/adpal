@@ -8,7 +8,7 @@ class Ad < ActiveRecord::Base
 
   def self.search(search)
   if search
-    find(:all, :conditions => ['LOWER(title) ILIKE ?', ("%#{search.downcase}%")])
+    find(:all, :conditions => ['LOWER(title) ILIKE ? or LOWER(info) ILIKE ?', ("%#{search.downcase}%"), ("%#{search.downcase}%")])
   else
     find(:all)
   end

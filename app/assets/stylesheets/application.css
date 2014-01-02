@@ -16,11 +16,16 @@
 
 body {
 	background-color: #e74c3c;
+	
 	margin: 0;
 }
 
 .glob-con {
-	margin: 15px 250px;
+	margin: 0px auto 0 auto;
+	padding: 0 0 0px 0;
+	width: 1060px;
+	position: relative;
+	top: 70px;
 }
 
  .login_form {
@@ -43,7 +48,7 @@ body {
  	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
  	margin: 0 0 10px 0;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
  }
 
   .new_ad input {
@@ -56,7 +61,7 @@ body {
  	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
  	margin: 0 0 10px 0;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
  	background-color: white;
  	line-height: 50px;
  }
@@ -71,7 +76,7 @@ body {
  	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
  	margin: 0 0 10px 0;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
  	background-color: white;
  	line-height: 30px;
  }
@@ -95,7 +100,7 @@ body {
  	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
  	margin: 0 0 10px 0;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
  	background-color: white;
  	line-height: 50px;
  }
@@ -141,7 +146,7 @@ body {
 	color: inherit;
 	text-decoration: none;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
 
 }
 
@@ -156,7 +161,7 @@ body {
  	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
  	margin: 0 0 10px 0;
  	font-size: 16px;
- 	font-family: NexaLight, Helvetica, Arial, sans-serif;
+ 	font-family: Helvetica, Arial, sans-serif;
  	background-color: buttonface;
  	color: inherit;
  	text-decoration: none;
@@ -164,17 +169,17 @@ body {
 
 label {
 	color: white;
-	font-family: NexaBold, Helvetica, Arial, sans-serif;
+	font-family:  Helvetica, Arial, sans-serif;
 }
 
 .label {
 	color: white;
-	font-family: NexaBold, Helvetica, Arial, sans-serif;
+	font-family:  Helvetica, Arial, sans-serif;
 }
 
 .new_ad span {
 	color: white;
-	font-family: NexaBold, Helvetica, Arial, sans-serif;
+	font-family:  Helvetica, Arial, sans-serif;
 }
 
 .new_ad_fix {
@@ -194,7 +199,7 @@ label {
 	text-align: left!important;
 	height: 300px!important;
 	line-height: normal!important;
-	font-family: NexaLight, Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 input.pointer {
@@ -214,7 +219,7 @@ input.pointer {
 
 .shiw {
 	color: white;
-	font-family: NexaLight, Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	width: 800px;
 	margin-left: -400px; 
 	margin-top: -80px;
@@ -225,33 +230,39 @@ input.pointer {
 }
 
 .shiw h2 {
-	font-family: NexaBold, 'Arial Black', Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	text-align: center; 
 	margin-top: 0 0 40px 0;
+	font-weight: 700;
 }
 
 h1 {
 	color: white;
-	font-family: NexaBold, 'Arial Black',Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .adspace_grid {
-	width: 695px;
-	height: 150px;
+	width: 125px;
+	height: 125px;
 	background-color: white;
 	border-radius: 10px;
-	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	
 	display: inline-block;
-	margin: 0 5px 10px 0;
 }
 
 .text_info {
-	height: 125px;
-	margin-top: 12px;
+	height: 50px;
 	text-transform: uppercase;
-	font-family: NexaLight, Helvetica, arial, sans-serif;
-	margin-right: 10px;
+	font-family: Helvetica, arial, sans-serif;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 125px;
+	margin-top: 75px;
+		transition: margin-top 0.1s;
+-webkit-transition: margin-top 0.1s; /* Safari */
 }
 
 .navs form {
@@ -260,24 +271,30 @@ h1 {
 
 .glow_f {
 	box-shadow: none!important;
-	border: 1px solid black!important;
 }
 
 .text_info_f {
-	height: 125px;
-	margin-top: 37px;
+	height: 50px;
 	text-transform: uppercase;
-	font-family: NexaLight, Helvetica, arial, sans-serif;
-	margin-right: 10px;
+	font-family: Helvetica, arial, sans-serif;
+	position: absolute;
+	background-color: rgba(0,0,0,0.5);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	width: 250px;
+	margin-top: 200px;
+	transition: margin-top 0.1s;
+-webkit-transition: margin-top 0.1s; /* Safari */
 }
 
 .bold {
-	font-family: NexaBold, 'Arial Black', Helvetica, arial, sans-serif!important;
+	font-family: Helvetica, arial, sans-serif!important;
+	font-weight: 700;
 }
 
 .navs {
 	color: black;
-	font-family: NexaLight, Helvetica, arial, sans-serif;
+	font-family: Helvetica, arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 20px;
 	width: auto;
@@ -287,18 +304,26 @@ h1 {
 
 .navs a {
 	text-decoration: none;
-	color: black;
+	color: white;
 	margin: 0 0 0 30px;
 }
 
 .navs a:hover {
-	font-family: NexaBold, 'Arial Black', Helvetica, arial, sans-serif;
+	font-family: Helvetica, arial, sans-serif;
+	font-weight: 700;
+}
+
+.navs .submit {
+	background-color: white!important;
+	color: black!important;
+	box-shadow: none;
+	height: 32px;
 }
 
 .header {
 	height: 70px;
 	line-height: 70px;
-	background-color: white;
+	z-index: 400;
 }
 
 .pic_sec {
@@ -306,10 +331,7 @@ h1 {
 	width: 125px;
 	display: inline-block;
     vertical-align:middle;
-    float: left;
-    margin-top: 12px;
-    margin-left: 10px;
-    margin-right: 10px;
+    position: absolute;
 }
 
 .featured_con {
@@ -323,21 +345,18 @@ h1 {
 	width: 250px;
 	display: inline-block;
     vertical-align:middle;
-    float: left;
-    margin-left: 7px;
-    padding-right: 10px;
-    margin-right: 10px;
-    margin-top: 5px;
+    position: absolute;
 }
 
 .adspace_grid_f {
-	width: 1400px;
-	height: 260px;
+	width: 250px;
+	height: 250px;
 	background-color: white;
-	border-radius: 10px;
-	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	
+	border-radius: 10px;	
 	display: inline-block;
 	margin: 0 15px 10px 0;
+	background-color: white;
+	color: black;
 }
 
 .pic_sec img {
@@ -354,14 +373,14 @@ h1 {
 }
 
 .white_box {
-	width: 1400px;
+	width: 1060px;
 	min-height: 850px;
 	background-color: white;
 	border-radius: 10px;
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	
 	display: inline-block;
 	margin: 0 15px 0 0;
-	font-family: NexaLight, Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	padding: 0 10px 0 10px;
 }
@@ -373,11 +392,105 @@ h1 {
 }
 
 a.delete {
-	font-family: NexaBold, Helvetica, Arial, sans-serif;
-	color: #e74c3c;
+	font-family:  Helvetica, Arial, sans-serif;
+	color: white;
 }
 
 a.title {
-	font-family: NexaBold, Helvetica, Arial, sans-serif;
-	color: #e74c3c;	
+	font-family:  Helvetica, Arial, sans-serif;
+	color: white;	
+}
+
+.header {
+	background-color: #e74c3c;
+	width: 100%;
+	position: fixed;
+}
+
+.text_title {
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.text_info_f:hover {
+	margin-top: 0px;
+	height: 250px;
+	border-radius: 10px;
+
+}
+
+.extra_info_f {
+	color: white;
+	display: none;
+}
+
+.extra_info {
+	color: white;
+	display: none;
+}
+
+.text_info_f:hover .extra_info_f {
+	display: inline-block;
+}
+
+.text_info:hover .extra_info {
+	display: inline-block;
+}
+
+.featured_container {
+	width: 100%;
+	height: auto;
+}
+
+.text_info:hover {
+	margin-top: 0px;
+	height: 125px;
+	border-radius: 10px;
+}
+
+.search_con {
+	margin: 0 0 10px 0;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.search_con h1 {
+	color: #e74c3c;
+}
+
+.ads_con {
+	margin: 0 0 0 0;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.ads_con h1 {
+	color: #e74c3c;
+}
+
+.welcome_box {
+	margin: 0 0 10px 0;
+	height: 250px;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 22px;
+	text-align: center;
+}
+
+strong {
+	color: #e74c3c;
+}
+
+strong a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.welcome_box p {
+	margin: 81.5px 0 0 0;
 }
