@@ -1,21 +1,27 @@
 <style type="text/css">
 .ads_link {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   color: white!important;
 }
 </style>
 
-<div class="welcome_box">
-  <p><strong><%= link_to "SmartAds", ads_path + "?utf8=✓&search=Search+Here..." %></strong> is a cheap and easy-to-use ad service,</br>
-    with ad prices from <strong>free</strong> to £1.50,</br>
-    what's there to lose?</br>
-    <strong><%= link_to "Post an ad now.", new_ad_path %></strong></p>
+<div class="welcome_area">
+  <div class="left_welcome">
+    Here at AdPal,</br>
+    You can find what you want,</br>
+    When you want.
+  </div>
+  <div class="arrow_down">
+    <a href="#ads" class="scroll"></a>
+  </div>
 </div>
 
-
+<div class="index-con" id="ads">
+<div class="glob-con">
 <div class="search_con">
-<h1>Search Results</h1>
+<h1 class="sub-header">Search Results</h1>
+<hr>
 <div class="featured_container">
 <% @ads.each do |ad| %>
 
@@ -69,7 +75,8 @@
 </div>
 
 <div class="ads_con">
-  <h1>Latest Ads</h1>
+  <h1 class="sub-header">Latest Ads</h1>
+  <hr>
 <div class="featured_container">
 <% @ads_featured.each do |ad| %>
   <div class="adspace_grid_f">
@@ -139,5 +146,19 @@
 <% end %>
 
 </div>
+
+</div>
+
+</div>
+
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+ 
+  $(".scroll").click(function(event){   
+    event.preventDefault();
+    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+  });
+});
+</script>
 
 

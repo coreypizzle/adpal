@@ -5,14 +5,10 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-    <script>
-    $(function(){
-      $("#slides").slidesjs({
-        width: 400,
-        height: 400
-      });
-    });
-  </script>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+  <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -35,11 +31,9 @@
 	</div>
 </div>
 
-<div class="glob-con">
 
 <%= yield %>
 
-</div>
 
 </body>
 </html>
