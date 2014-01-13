@@ -11,6 +11,7 @@ a {
   display: inline!important;
 }
 </style>
+<div class="red_bg">
 <div class="new_ad new_ad_fix">
 <%= form_for @ad, :html => {:multipart => true} do |f| %>
   <% if @ad.errors.any? %>
@@ -47,11 +48,12 @@ a {
   <div class="no_align">
   <div class="field ra_button">
     <%= f.radio_button(:size, "medium") %><span>Standard - FREE </span></br>
-    <%= f.radio_button(:size, "featured") %><span>Featured - £0.50 P/W Opening Sale!</span></br>
+    <%= f.radio_button(:size, "featured") %><span>Featured - £0.75 Per Week (Recurring) </span></br>
   </div> </br>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 </div>

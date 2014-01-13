@@ -1,4 +1,5 @@
-<p id="notice"><%= notice %></p>
+<div class="red_bg">
+
 <div class="white_box">
 <p class="bold title_show">
   <%= @ad.title %>
@@ -7,6 +8,8 @@
   <%= image_tag @ad.preview.url(:showpg), :class => "show_img" %></br>
   <%= @ad.info %></br>
   <span class="bold">Contact : </span><%= @ad.url %></br>
-  <span class="bold">Location : </span><%= @ad.location %>
+  <span class="bold">Location : </span><%= @ad.location %></br>
+  <%= link_to 'Back', ads_path + "?utf8=✓&search=Search+Here..." %>
 </div>
-<%= link_to 'Back', ads_path + "?utf8=✓&search=Search+Here..." %>
+
+</div>

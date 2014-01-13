@@ -1,0 +1,30 @@
+<div class="index-con ads_con" id="ads">
+  <div class="glob-con_m">
+<h1 class="sub-header">My Ads</h1>
+<hr>
+<div class="featured_container">
+<% @ads_mine.each do |ad| %>
+  <div class="adspace_grid_f">
+    <div class="pic_sec_f">
+      <%= image_tag ad.preview.url(:featured) %>
+    </div>
+    <div class="text_info_f">
+      <div class="text_title">
+        <span class="bold"><%= link_to truncate(ad.title, length: 26), ad, :class => "title" %></span></br>
+      </div>
+      <div class="extra_info_f">
+        <p><%= truncate(ad.info, length: 30) %></p>
+        <span class="bold"><%= ad.location %></span></br>
+        <span class="bold"><%= ad.url %></span>
+      </div>
+          <% if can? :destroy, ad %>
+      <%= link_to 'Delete', ad, :method => :delete, :class => "delete" %> 
+    <% end %>
+    </div>
+
+  </div> 
+<% end %>
+</div>
+</div>
+</div>
+

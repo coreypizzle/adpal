@@ -12,6 +12,10 @@ class AdsController < ApplicationController
     
   end
 
+  def myads
+    @ads_mine = Ad.where(:user_id => current_user.id )
+  end
+
   # GET /ads/1
   # GET /ads/1.json
   def show

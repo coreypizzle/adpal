@@ -37,6 +37,14 @@ body {
 	top: 70px;
 }
 
+.glob-con_m {
+	margin: 0px auto 0 auto;
+	padding: 0 0 0px 0;
+	width: 1060px;
+	position: relative;
+	top: 80px;
+}
+
 hr {
 	border: 0;
     height: 1px;
@@ -46,7 +54,7 @@ hr {
 .scroll {
 	height: 256px;
 	width: 256px;
-	background-image: url('/assets/arrow.png');
+	background: url("arrow.png");
 	display: block;
 }
 
@@ -93,6 +101,11 @@ hr {
  	margin: 0 0 10px 0;
  	font-size: 16px;
  	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ }
+
+ .new_ad {
+ 	position: relative;
+ 	top: 50px;
  }
 
   .new_ad input {
@@ -336,6 +349,16 @@ h1 {
 	font-weight: 700;
 }
 
+.logo {
+	width: auto;
+	float: left;
+	font-size: 35px;
+	font-family: "Montserrat", "Helvetica Neue", Helvetica, arial, sans-serif;
+	color: white;
+	margin: 0 0 0 15px;
+	font-weight: 800;
+}
+
 .navs {
 	color: black;
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, arial, sans-serif;
@@ -421,10 +444,12 @@ h1 {
 	min-height: 850px;
 	background-color: white;
 	border-radius: 10px;
-	border: 3px solid black;
+	position: relative;
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	
 	display: inline-block;
-	margin: 0 15px 0 0;
+	top: 70px;
+	left: 50%;
+	margin-left: -520px;
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	padding: 0 10px 0 10px;

@@ -1,5 +1,10 @@
 Datalog::Application.routes.draw do
-  resources :ads
+
+  resources :ads do
+    collection do
+      get 'myads'
+    end
+  end
 
  devise_for :users, :controllers => { registrations: 'users/registrations' }
   resources :events
