@@ -56,6 +56,9 @@ hr {
 	width: 256px;
 	background: url("arrow.png");
 	display: block;
+	text-decoration: none;
+	color: white;
+	font-size: 166px;
 }
 
 .arrow_down {
