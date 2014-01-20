@@ -13,20 +13,89 @@
  */
 
 html, body {
-   height: 100%;
    width: 100%;
    margin: 0;
    padding: 0;
 }
 
+html {
+	min-height: 200%;
+}
+
 body {
 	background-color: #ffffff;
 	margin: 0;
+	height: 100%;
+}
+
+#error_explanation {
+	color: white;
+	font-family: 'Montserrat'
 }
 
 .red_bg {
 	background-color: #e74c3c;
 	height: 100%;
+}
+
+.ra_button input {
+	width: 45px;
+	position: relative;
+	left: -25px;
+}
+
+#ad_preview {
+	border-radius: 5px;
+	padding: 3px;
+	border: none;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+}
+
+.ra_button span {
+	position: relative;
+	top: -18px;
+	left: -25px;
+}
+
+.pay_sec {
+	height: auto;
+	width: auto;
+	padding: 15px;
+	background-color: #c0392b;
+	border-radius: 10px;
+	margin: 0 0 10px 0;
+	position: relative;
+	left: -15px;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+}
+
+select {
+	background-color: white;
+	border-radius: 5px;
+	padding: 3px;
+	border: none;
+	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
+}
+
+.pay_sec input {
+	text-align: left!important;
+	text-indent: 15px;
+}
+
+.red_bg_full {
+	background-color: #e74c3c;
+	height: auto;
+}
+
+.gads {
+	color: white;
+}
+
+.stripe {
+	width: 8%;
+	height: 8%;
+	position: relative;
+	top: 4px;
 }
 
 .glob-con {
@@ -58,7 +127,14 @@ hr {
 	display: block;
 	text-decoration: none;
 	color: white;
-	font-size: 166px;
+	font-size: 20px;
+	font-family: "Montserrat", Arial, sans-serif;
+	text-align: center;
+}
+
+.scroll span {
+	position: relative;
+	top: 58px;
 }
 
 .arrow_down {
@@ -394,6 +470,7 @@ h1 {
 	height: 70px;
 	line-height: 70px;
 	z-index: 400;
+	margin-left: -2px;
 }
 
 .pic_sec {
@@ -544,6 +621,39 @@ a.title {
 	color: #e74c3c;
 }
 
+#container {
+	position: relative;
+	min-height: 200%;
+}
+
+.plusone {
+	position: relative;
+	top: 50%;
+	width: 106px;
+	margin: -12px 0 0 0!important;
+	height: 24px;
+}
+
+.vert-cen {
+	top: 50%;
+	position: relative;
+	margin-top: -24px;
+	margin-right: 47px;
+	display: inline-block;
+}
+
+.fbshare {
+
+}
+
+.share {
+	height: 100%;
+	width: 45%;
+	margin: 0 0 0 5%;
+	display: inline-block;
+	float: left;
+}
+
 .welcome_box {
 	margin: 0 0 10px 0;
 	height: 250px;
@@ -596,4 +706,13 @@ strong a {
 hr {
 	margin: 0 0 10px 0;
 	background-color: rgba(0,0,0,0.3)!important;
+}
+
+.footer {
+	width: 100%;
+	height: 50px;
+	background-color: #f2f2f2;
+	position: absolute;
+	bottom: 0;
+	border: 1px solid #e4e4e4;
 }

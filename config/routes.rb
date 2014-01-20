@@ -3,6 +3,7 @@ Datalog::Application.routes.draw do
   resources :ads do
     collection do
       get 'myads'
+      get 'contact'
     end
   end
 

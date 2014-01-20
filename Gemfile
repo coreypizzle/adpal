@@ -27,6 +27,8 @@ gem 'carrierwave'
 
 gem 'paperclip'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

@@ -37,7 +37,7 @@ class AdsController < ApplicationController
     @ad.user_id = current_user.id
 
     respond_to do |format|
-      if @ad.save
+      if @ad.save_with_payment
         format.html { redirect_to @ad, notice: 'Ad was successfully created.' }
         format.json { render action: 'show', status: :created, location: @ad }
       else
@@ -64,7 +64,8 @@ class AdsController < ApplicationController
   # DELETE /ads/1
   # DELETE /ads/1.json
   def destroy
-      @ad.destroy
+
+      @ad.destroy_payment
       respond_to do |format|
         format.html { redirect_to ads_url }
         format.json { head :no_content }
@@ -79,6 +80,6 @@ class AdsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def ad_params
-      params.require(:ad).permit(:title, :url, :preview, :location, :size, :info, :search)
+      params.require(:ad).permit(:title, :url, :preview, :location, :size, :info, :search, :stripe_card_token, :stripe_customer_token)
     end
 end
