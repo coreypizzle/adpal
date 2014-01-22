@@ -9,6 +9,7 @@
   <%= tag :meta, :name => "description", :content => "The #1 site for posting an ad and looking for that one thing you've always wanted, whether it's a car or a small bike for the kids, we've got you covered." %>
   <link rel="author" href="https://plus.google.com/u/1/100402716539715687271"/>
   <%= tag :meta, :name => "og:title", :content => "AdLookr - The #1 Ad Site" %>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
   <%= tag :meta, :name => "og:description", :content => "The #1 site for posting an ad and looking for that one thing you've always wanted, whether it's a car or a small bike for the kids , we've got you covered." %>
   <!-- Add the following three tags inside head. -->
 <meta itemprop="name" content="AdLookr - Finding what you want, when you want.">
@@ -31,20 +32,23 @@
   ga('send', 'pageview');
 
 </script>
+
+<script type="text/javascript">
+$(function(){
+    $('#pull').mouseenter(function(){
+        $('#dropdown').parent().addClass('altbg')
+    }).mouseout(function(){
+        $(this).parent().removeClass('altbg')
+    });
+});
+</script>
 </head>
 <body>
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+ 
 <div id="container">
 <div class="header">
   <div class="logo">
-    ADLOOKR
+    <%= link_to "ADLOOKR", root_path %>
   </div>
 	<div class="navs">
     <%= form_tag ads_path, :method => :get do %>
@@ -66,6 +70,7 @@
 			<%= link_to "Sign In / Sign Up", new_user_session_path %>
 		<% end %>
     <a href="mailto:adlookr@gmail.com?Subject=Hi%20AdLookr" target="_top">Contact</a>
+
 	</div>
 </div>
 
@@ -74,23 +79,5 @@
 
 <%= yield %>
 
-<div class="footer">
-  <div class="share">
-    <div class="plusone vert-cen">
-      <div class="g-plusone" id="plusone" data-href="http://www.adlookr.com"></div>
-    </div>
-    <div class="vert-cen fbshare">
-      <div class="fb-like" data-href="http://www.adlookr.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-    </div>
-  </div>
-</div>
-</div>
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
 </body>
 </html>

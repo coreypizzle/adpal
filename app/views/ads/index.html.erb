@@ -1,8 +1,22 @@
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <style type="text/css">
 .ads_link {
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   color: white!important;
+}
+
+#container {
+  position: relative;
+  min-height: 200%;
 }
 </style>
 
@@ -13,11 +27,11 @@
     Whenever you want.
   </div>
   <div class="arrow_down">
-    <a href="#ads" class="scroll"><span>Click to look for ads</span></a>
+    <a href="#afixds" class="scroll"><span>Click to look for ads</span></a>
   </div>
 </div>
 
-<div class="index-con" id="ads">
+<div class="index-con" id="afixds">
 <div class="glob-con">
 <div class="search_con">
 <h1 class="sub-header">Search Results</h1>
@@ -26,9 +40,9 @@
 <% @ads.each do |ad| %>
 
 <% if ad.size == "featured" %>
-  <div class="adspace_grid_f">
+  <div class="afixdspace_grid_f">
     <div class="pic_sec_f">
-      <%= image_tag ad.preview.url(:featured) %>
+      <%= image_tag ad.preview.url(:featured), :alt => "It seems you have adblocked, to view this ad please disable it." %>
     </div>
     <div class="text_info_f">
     <div class="text_title">
@@ -53,7 +67,7 @@
 
 <% @ads.each do |ad| %>
 <% if ad.size == "medium" %>
-  <div class="adspace_grid">
+  <div class="afixdspace_grid">
     <div class="pic_sec">
       <%= image_tag ad.preview.url(:medium) %>
     </div>
@@ -74,12 +88,12 @@
 <% end %>
 </div>
 
-<div class="ads_con">
+<div class="afixds_con">
   <h1 class="sub-header">Latest Ads</h1>
   <hr>
 <div class="featured_container">
 <% @ads_featured.each do |ad| %>
-  <div class="adspace_grid_f">
+  <div class="afixdspace_grid_f">
     <div class="pic_sec_f">
       <%= image_tag ad.preview.url(:featured) %>
     </div>
@@ -105,7 +119,7 @@
 
 
 <% @ads_medium.each do |ad| %>
-  <div class="adspace_grid">
+  <div class="afixdspace_grid">
     <div class="pic_sec">
       <%= image_tag ad.preview.url(:medium) %>
     </div>
@@ -150,6 +164,25 @@
 </div>
 
 </div>
+
+<div class="footer">
+  <div class="share">
+    <div class="plusone vert-cen">
+      <div class="g-plusone" id="plusone" data-href="http://www.adlookr.com"></div>
+    </div>
+    <div class="vert-cen fbshare">
+      <div class="fb-like" data-href="http://www.adlookr.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 
 <script type="text/javascript">
 jQuery(document).ready(function($) {
