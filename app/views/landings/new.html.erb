@@ -1,0 +1,10 @@
+<style type="text/css">
+.header {
+	display: none!important;
+}
+</style>
+
+<%= form_for :landing, url: landings_path do |f| %>
+	<%= f.text_field :email, :placeholder => "Please enter your email" %>
+	<%= f.submit "Apply for AdLookr"%>
+<% end %>
