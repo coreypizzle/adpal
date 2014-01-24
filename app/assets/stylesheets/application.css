@@ -899,3 +899,61 @@ hr {
 .how_works {
 	margin: 0 0 85px 0; 
 }
+
+@media screen and (max-width: 640px) {
+	.inner_container {
+		width: 100%;
+	}
+
+	.blue_half {
+		height: auto;
+	}
+
+	.header_area {
+		height: auto;
+	}
+
+	.blue_half .inner_container {
+		padding-top: 5px!important;
+		text-align: center
+	}
+
+	.beta_apply .beta_email {
+		width: 75%;
+		line-height: default;
+		border-radius: 0;
+	}
+
+	.beta_apply input {
+		width: 25%;
+		border-radius: 0;
+	}
+
+	.beta_apply {
+		margin: 0 auto 0 auto;
+		display: inline-block;
+	}
+
+	.first25 {
+		height: auto;
+		margin-top: -15px!important;
+	}
+
+	.blue_second .beta_apply {
+		width: 198px;
+		margin: 0 auto 0 auto;
+		display: inline-block;
+		left: 50%;
+		margin-left: -99px;
+		padding-top: 5px;
+		position: relative;
+	}
+
+	.blue_second .beta_apply .beta_email {
+		width: 75%;
+	}
+
+	.blue_second {
+		height: auto;
+	}
+}

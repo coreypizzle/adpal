@@ -15,7 +15,7 @@
 		<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
 				<%= f.text_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
-				<%= f.submit "Apply for AdLookr"%>
+				<%= f.submit "Apply"%>
 			<% end %>
 			<% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
@@ -85,7 +85,7 @@
 					<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
 				<%= f.text_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
-				<%= f.submit "Apply for AdLookr"%>
+				<%= f.submit "Apply"%>
 			<% end %>
 			<% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
