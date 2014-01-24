@@ -561,7 +561,7 @@ a.title {
 	text-align: center;
 }
 
-.text_info_f:hover {
+.text_info_f:hover, .text_info_f:focus {
 	margin-top: 0px;
 	height: 250px;
 	border-radius: 10px;
@@ -578,11 +578,11 @@ a.title {
 	display: none;
 }
 
-.text_info_f:hover .extra_info_f {
+.text_info_f:hover .extra_info_f, .text_info_f:focus .extra_info_f {
 	display: inline-block;
 }
 
-.text_info:hover .extra_info {
+.text_info:hover .extra_info, .text_info:focus .extra_info {
 	display: inline-block;
 }
 
@@ -591,7 +591,7 @@ a.title {
 	height: auto;
 }
 
-.text_info:hover {
+.text_info:hover, .text_info:focus {
 	margin-top: 0px;
 	height: 125px;
 	border-radius: 10px;
