@@ -990,4 +990,15 @@ hr {
 	.blue_second {
 		height: auto;
 	}
+
+	.text_info_f {
+	margin-top: 0px;
+	height: 250px;
+	border-radius: 10px;
+
+	}
+
+	.text_info_f .extra_info_f {
+		display: inline-block;
+	}
 }
