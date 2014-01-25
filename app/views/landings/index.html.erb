@@ -7,15 +7,15 @@
 <div class="blue_half">
 	<div class="inner_container">
 		<div class="logo_land">
-			<h1>AdLookr</h1>
+			<h1><span class="lighter">Ad</span>Lookr</h1>
 		</div>
 		<h1 class="head_shadow">Great ads, even better prices.
 		<br>Get noticed. Get AdLookr.</h1>
-		<h2>We're getting ready to launch, so go ahead and try out AdLookr.</h2>
+		<h2>Launching soon, sign up to get notified.</h2>
 		<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
 				<%= f.email_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
-				<%= f.submit "Apply"%>
+				<%= f.submit "Sign Up"%>
 			<% end %>
 			<% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>
@@ -29,13 +29,16 @@
 		<div class="header_area">
 			<div class="first25">
 				<h2>An amazing way to host an ad </h2>
+				
 				<p>Here at AdLookr, we do our best to get your ad out there,</br>
 				from selling something to advertising your blog, we've got you covered.
 				</p>
 			</div>
 		</div>
+
 		<div class="how_works">
 			<h2>How it works</h2>
+					
 			<div>
 
 				<div class="afixdspace_grid_f center_as">
@@ -54,23 +57,34 @@
 					</div>
 
   				</div> 
-
   				<div class="desc-fix">
   					<p>
   					This is what the ads on AdLookr are like,</br>
   					big, stylish and best of all, easy to notice.</br>
-  					Give it a go, hover over the title.</br>
-  					See? Even more information, you've got the description, the location</br>
+  					Give it a go, hover or click on the title.</br>
+  					See? There's room for even more information, you've got the description, the location</br>
   					and also a handy bit of text that could be your phone number, your email</br>
   					and maybe even your web address.</br>
   					Not to mention the fact that you can upload an image along with the ad!
+  					</p>
+  					<h2>What can I advertise?</h2>
+
+  					<p>
+  						Anything that you can think of!</br>
+  						If you want to sell your car,</br>
+  						your bike or maybe your old TV</br>
+  						AdLookr makes it easy to do that!</br>
+  						You might want to advertise your site or blog,</br>
+  						you can also do that!
   					</p>
   				</div>
 
 			</div>
 		</div>
+
 		<div class="secure_pay">
 			<h2>Handled by Stripe</h2>
+					
 			<p>
 				At AdLookr, we make sure you're protected.</br>
 				With <%= link_to "Stripe", "http://www.stripe.com", :target => "_blank" %> you don't have to worry</br>
@@ -81,11 +95,11 @@
 
 		</div>
 				<div class="blue_second">
-					<h2>We're getting ready to launch,</br> so now that you're convinced, apply now!</h2>
+					<h2>We're nearly ready to launch, </br>sign up and we'll let you know when we launch</h2>
 					<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
 				<%= f.email_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
-				<%= f.submit "Apply"%>
+				<%= f.submit "Sign Up"%>
 			<% end %>
 			<% if flash[:notice] %>
     <div id="notice"><%= flash[:notice] %></div>

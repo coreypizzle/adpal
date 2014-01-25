@@ -382,19 +382,20 @@ h1 {
 	background-color: white;
 	border-radius: 10px;
 	display: inline-block;
+	overflow: hidden;
 }
 
 .text_info {
 	height: 50px;
 	font-family: "Lato", "Helvetica Neue", Helvetica, arial, sans-serif;
-	position: absolute;
+	position: relative;
 	background-color: rgba(0,0,0,0.5);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	width: 125px;
 	margin-top: 75px;
-		transition: margin-top 0.1s;
--webkit-transition: margin-top 0.1s; /* Safari */
+		transition: margin-top 0.5s;
+-webkit-transition: margin-top 0.5s; /* Safari */
 }
 
 .navs form {
@@ -408,14 +409,14 @@ h1 {
 .text_info_f {
 	height: 50px;
 	font-family: "Lato", "Helvetica Neue", Helvetica, arial, sans-serif;
-	position: absolute;
+	position: relative;
 	background-color: rgba(0,0,0,0.5);
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 	width: 250px;
 	margin-top: 200px;
-	transition: margin-top 0.1s;
--webkit-transition: margin-top 0.1s; /* Safari */
+	transition: margin-top 0.5s;
+-webkit-transition: margin-top 0.5s; /* Safari */
 }
 
 .bold {
@@ -497,6 +498,7 @@ h1 {
 	margin: 0 15px 10px 0;
 	background-color: white;
 	color: black;
+	overflow: hidden;
 }
 
 .pic_sec img {
@@ -571,11 +573,13 @@ a.title {
 .extra_info_f {
 	color: white;
 	display: none;
+	padding: 0 8px 0 8px;
 }
 
 .extra_info {
 	color: white;
 	display: none;
+	padding: 0 8px 0 8px;
 }
 
 .text_info_f:hover .extra_info_f, .text_info_f:focus .extra_info_f {
@@ -736,7 +740,7 @@ hr {
 
 .blue_half {
 	background-color: #3498db;
-	height: 75%;
+	height: 40%;
 	width: 100%;
 	margin: 0;
 }
@@ -760,6 +764,10 @@ hr {
 	color: black;
 }
 
+.main_info {
+	margin-top: 38px;
+}
+
 .main_info h2 {
 	font-size: 26px;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
@@ -769,7 +777,7 @@ hr {
 }
 
 .header_area {
-	height: 25%;
+	height: auto;
 }
 
 .header_area p {
@@ -790,10 +798,11 @@ hr {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	text-transform: none;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
 }
 
 .blue_half .inner_container {
-	padding-top: 100px!important;
+	padding-top: 40px!important;
 }
 
 .beta_apply .beta_email {
@@ -812,6 +821,10 @@ hr {
 	border-bottom-right-radius: 0!important;
 }
 
+.beta_email:hover, .beta_email:focus {
+	background-color: white!important;
+}
+
 .beta_apply input {
 	height: 50px;
 	width: 140px;
@@ -823,6 +836,11 @@ hr {
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
+	font-size: 20px;
+}
+
+.beta_apply input:hover, .beta_apply input:focus {
+	background-color: #2980b9;
 }
 
 #notice {
@@ -835,6 +853,13 @@ hr {
 	width: 100%;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	color: black;
+}
+
+.logo_land img {
+	position: relative;
+	margin: 0 5px 0 0;
+	width: 20px;
+	height: 20px;
 }
 
 .inline-block {
@@ -855,6 +880,10 @@ hr {
 	text-align: center;
 }
 
+.main_info {
+	line-height: 1.5em;
+}
+
 .center_as {
 	margin: 0 auto 0 auto;
 	display: block;
@@ -868,6 +897,7 @@ hr {
 .blue_second {
 	height: 25%;
 	background-color: #3498db;
+	line-height: 1.75em;
 }
 
 .blue_second .beta_apply {
@@ -893,11 +923,15 @@ hr {
 }
 
 .secure_pay {
-	margin: 0 0 85px 0;
+	margin: 0 0 38px 0;
 }
 
 .how_works {
-	margin: 0 0 85px 0; 
+	margin: 0 0 38px 0; 
+}
+
+.lighter {
+	font-weight: 300;
 }
 
 @media screen and (max-width: 640px) {
