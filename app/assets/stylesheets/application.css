@@ -838,6 +838,8 @@ hr {
 	border-bottom-right-radius: 5px;
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size: 20px;
+	-webkit-appearance: none;
+  	-webkit-border-radius: 0;
 }
 
 .beta_apply input:hover, .beta_apply input:focus {
