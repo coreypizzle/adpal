@@ -21,14 +21,15 @@
 </style>
 
 <div class="welcome_area">
-  <div class="left_welcome">
-    Here at AdLookr,</br>
-    You can find an ad,</br>or post one,</br>
-    Whenever you want.
+  <div class="inner_container">
+    <div class="left_welcome head_shadow center_align">
+      Amazing Ads. Amazing Value.<br>
+      Get noticed, <%= link_to "Get AdLookr", new_user_registration_path  %>
+    </div>
   </div>
-  <div class="arrow_down">
+  <!--<div class="arrow_down">
     <a href="#afixds" class="scroll"><span>Click to look for ads</span></a>
-  </div>
+  </div> -->
 </div>
 
 <div class="index-con" id="afixds">
@@ -164,34 +165,5 @@
 </div>
 
 </div>
-
-<div class="footer">
-  <div class="share">
-    <div class="plusone vert-cen">
-      <div class="g-plusone" id="plusone" data-href="http://www.adlookr.com"></div>
-    </div>
-    <div class="vert-cen fbshare">
-      <div class="fb-like" data-href="http://www.adlookr.com" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-    </div>
-  </div>
 </div>
-</div>
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/platform.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
-
-<script type="text/javascript">
-jQuery(document).ready(function($) {
- 
-  $(".scroll").click(function(event){   
-    event.preventDefault();
-    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
-  });
-});
-</script>
-
 

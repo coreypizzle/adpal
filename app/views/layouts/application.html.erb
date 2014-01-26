@@ -1,7 +1,7 @@
 <!DOCTYPE html itemscope itemtype="http://schema.org/Organization">
 <html>
 <head>
-  <title>AdLookr</title>
+  <title>AdLookr | Classified Ads - Get Noticed, Get AdLookr</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "https://js.stripe.com/v2/", "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -46,8 +46,9 @@ $(function(){
  
 <div id="container">
 <div class="header">
+  <div class="header_fix">
   <div class="logo">
-    <%= link_to "AdLookr", root_path %>
+    <a href="http://www.adlookr.com"><span class="lighter">Ad</span>Lookr</a>
   </div>
 	<div class="navs">
     <%= form_tag ads_path, :method => :get do %>
@@ -71,6 +72,7 @@ $(function(){
     <a href="mailto:adlookr@gmail.com?Subject=Hi%20AdLookr" target="_top">Contact</a>
 
 	</div>
+</div>
 </div>
 
 
