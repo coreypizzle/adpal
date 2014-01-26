@@ -1,0 +1,35 @@
+<style type="text/css">
+  .header {
+    display: none!important;
+  }
+</style>
+
+<div class="blue_bg">
+  <div class="inner_container_blog">
+
+    <div class="logo_land">
+      <h1>
+        <span class="lighter">Ad</span>Lookr
+      </h1>
+    </div>
+
+    <h1 class="head_shadow">Blog</h1>
+
+    <% @posts.each do |post| %>
+      <div class="blog_post">
+        <div class="blog_title">
+          <%= post.title %>
+        </div>
+        <div class="blog_content">
+          <%= post.content %>
+        </div>
+        <div class="blog_timestamp">
+          <%= post.created_at %>
+        </div>
+      </div>
+    <% end %>
+
+  <%= link_to 'New Post', new_post_path %>
+
+  </div>
+</div>

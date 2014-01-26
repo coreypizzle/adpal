@@ -1,5 +1,7 @@
 Datalog::Application.routes.draw do
 
+  resources :posts
+
   get "landing/index"
   resources :ads do
     collection do
