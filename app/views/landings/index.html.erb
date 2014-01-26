@@ -9,12 +9,12 @@
 		<div class="logo_land">
 			<h1><span class="lighter">Ad</span>Lookr</h1>
 		</div>
-		<h1 class="head_shadow">Amazing ads. Amazing value.
+		<h1 class="head_shadow">Amazing classified ads.
 		<br>Get noticed. Get AdLookr.</h1>
 		<h2>Launching soon, sign up to get notified.</h2>
 		<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
-				<%= f.email_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
+				<%= f.email_field :email, :placeholder => "Enter your email", :class => "beta_email" %>
 				<%= f.submit "Sign Up"%>
 			<% end %>
 			<% if flash[:notice] %>
@@ -28,10 +28,10 @@
 
 		<div class="header_area">
 			<div class="first25">
-				<h2>An amazing way to host an ad </h2>
+				<h2>An amazing way to make an ad </h2>
 				
-				<p>Here at AdLookr, we do our best to get your ad out there,</br>
-				from selling something to advertising your blog, we've got you covered.
+				<p>We are an amazing classified ads site.</br>
+				We help your ad get noticed.
 				</p>
 			</div>
 		</div>
@@ -62,24 +62,28 @@
   				</div> 
   				<div class="desc-fix">
   					<p>
-  					This is what the ads on AdLookr are like,</br>
-  					big, stylish and best of all, easy to notice.</br>
-  					Give it a go, hover or click on the title.</br>
-  					Unless you're on mobile, all the information is already there for you.</br>
-  					See? There's room for even more information, you've got the description, the location</br>
-  					and also a handy bit of text that could be your phone number, your email</br>
-  					and maybe even your web address.</br>
-  					Not to mention the fact that you can upload an image along with the ad!
+  						With AdLookr all you need to do</br>
+  						is create your free account and then</br>
+  						start making your ad.</br></br>
+  						All the ads on AdLookr have a sleek</br>
+  						and smooth design, making it easier</br>
+  						for you to display your information</br>
+  						clearly and precisely.</br></br>
+  						Hover over the title on the ad above.</br>
+  						(If your on a mobile device there's no need to hover.)</br>
+  						See? Plenty of room for more information.</br>
   					</p>
   					<h2>What can I advertise?</h2>
 
   					<p>
-  						Anything that you can think of!</br>
-  						If you want to sell your car,</br>
-  						your bike or maybe your old TV</br>
-  						AdLookr makes it easy to do that!</br>
-  						You might want to advertise your site or blog,</br>
-  						you can also do that!
+  						You can advertise anything!</br>
+  						Here at AdLookr we make it easier</br>
+  						to create an ad.</br>
+  						No problems. No fuss,</br> 
+  						just enter your ad's details.</br>
+  						Whether you're selling </br>
+  						a car, a television or a games console</br>
+  						you're guaranteed a quality service.
   					</p>
   				</div>
 
@@ -102,7 +106,7 @@
 					<h2>We're nearly ready to launch, </br>sign up and we'll let you know when we launch</h2>
 					<div class="beta_apply">
 			<%= form_for :landing, url: landings_path do |f| %>
-				<%= f.email_field :email, :placeholder => "Please enter your email", :class => "beta_email" %>
+				<%= f.email_field :email, :placeholder => "Enter your email", :class => "beta_email" %>
 				<%= f.submit "Sign Up"%>
 			<% end %>
 			<% if flash[:notice] %>

@@ -1002,18 +1002,17 @@ hr {
 	}
 
 	.beta_apply .beta_email {
-		width: 75%;
+		width: 65%;
 		line-height: default;
-		border-radius: 0;
 	}
 
 	.beta_apply input {
-		width: 25%;
-		border-radius: 0;
+		width: 35%;
+		font-size: 20px!important;
 	}
 
 	.beta_apply {
-		margin: 0 auto 0 auto;
+		margin: 0 -6px 0 auto;
 		display: inline-block;
 	}
 
@@ -1023,17 +1022,14 @@ hr {
 	}
 
 	.blue_second .beta_apply {
-		width: 198px;
-		margin: 0 auto 0 auto;
+		width: auto;
+		margin: 0 0px 0 12px;
 		display: inline-block;
-		left: 50%;
-		margin-left: -99px;
 		padding-top: 5px;
-		position: relative;
 	}
 
 	.blue_second .beta_apply .beta_email {
-		width: 75%;
+		width: 65%;
 	}
 
 	.blue_second {
