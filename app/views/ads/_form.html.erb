@@ -66,7 +66,7 @@ body, html {
     <%= label_tag :card_number, "Credit Card Number" %>
     <%= text_field_tag :card_number, nil, name: nil %>
   </div>
-  <%= f.hidden_field :stripe_card_token %>
+  <%= f.hidden_field :stripe_card_token, :id => "ad_stripe_card_token" %>
   <div class="field">
     <%= label_tag :card_code, "Security Code on Card (CVV) - The last 3 digits on the back of your card" %>
     <%= text_field_tag :card_code, nil, name: nil %>
