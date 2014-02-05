@@ -50,33 +50,12 @@ body, html {
     <%= f.label :location %><br>
     <%= f.text_field :location, :placeholder => "Location" %>
   </div></br>
-  <div class="field">
+  <div class="field file_input">
     <%= f.label :image %><span class="label"> (Recommended Image Size = 400x400 Pixels)</span><br>
     <%= f.file_field :preview, :placeholder => "Image" %>
   </div></br>
-  <div class="no_align">
-  <div class="field ra_button">
-    <label>Ad Size (More Coming Soon...)</label></br>
-    <%= f.radio_button(:size, "featured") %><span>Featured - £0.75 Per Week (Recurring) </span></br>
-  </div> </br>
-  </div>
-  <div class="pay_sec">
-  <label><%= image_tag "stripe.png", :class => "stripe" %> - Secure Payment</label></br></br>
-  <div class="field">
-    <%= label_tag :card_number, "Credit Card Number" %>
-    <%= text_field_tag :card_number, nil, name: nil %>
-  </div>
-  <%= f.hidden_field :stripe_card_token, :id => "ad_stripe_card_token" %>
-  <div class="field">
-    <%= label_tag :card_code, "Security Code on Card (CVV) - The last 3 digits on the back of your card" %>
-    <%= text_field_tag :card_code, nil, name: nil %>
-  </div>
-  <div class="field">
-    <%= label_tag :card_month, "Card Expiration" %>
-    <%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month"} %>
-    <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year"} %>
-  </div>
-  </div>
+
+
 
 
 

@@ -8,7 +8,7 @@ class AdsController < ApplicationController
     @ads = Ad.order('created_at DESC').search(params[:search])
     @ads_small = Ad.where(:size => "small").order('created_at DESC')
     @ads_medium = Ad.where(:size => "medium").order('created_at DESC')
-    @ads_featured = Ad.where(:size => "featured").order('created_at DESC')
+    @ads_featured = Ad.where(:size => nil).order('created_at DESC')
     
   end
 
@@ -37,7 +37,7 @@ class AdsController < ApplicationController
     @ad.user_id = current_user.id
 
     respond_to do |format|
-      if @ad.save_with_payment
+      if @ad.save
         format.html { redirect_to @ad, notice: 'Ad was successfully created.' }
         format.json { render action: 'show', status: :created, location: @ad }
       else
@@ -65,7 +65,7 @@ class AdsController < ApplicationController
   # DELETE /ads/1.json
   def destroy
 
-      @ad.destroy_payment
+      @ad.destroy
       respond_to do |format|
         format.html { redirect_to ads_url }
         format.json { head :no_content }

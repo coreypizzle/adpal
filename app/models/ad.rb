@@ -7,7 +7,6 @@ class Ad < ActiveRecord::Base
   validates :url, presence: true, length: { maximum: 40 }
   validates :info, presence: true
   validates :location, presence: true
-  validates :size, presence: true
 
   attr_accessor :stripe_card_token
 

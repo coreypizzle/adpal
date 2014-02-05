@@ -47,7 +47,6 @@ body {
 	border-radius: 5px;
 	padding: 3px;
 	border: none;
-	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);
 }
 
 .ra_button span {
@@ -108,7 +107,7 @@ select {
 .glob-con_m {
 	margin: 0px auto 0 auto;
 	padding: 0 0 0px 0;
-	width: 70%;
+	width: 50%;
 	position: relative;
 	top: 80px;
 }
@@ -468,12 +467,14 @@ h1 {
 	width: auto;
 	float: right;
 	margin: 0 15px 0 0;
+	font-weight: 400;
 }
 
 .navs a {
 	text-decoration: none;
 	color: white;
 	margin: 0 0 0 30px;
+	width: 80px;
 }
 
 .navs a:hover {
@@ -497,8 +498,8 @@ h1 {
 }
 
 .header {
-	height: 70px;
-	line-height: 70px;
+	height: 120px;
+	line-height: 50px;
 	z-index: 400;
 }
 
@@ -547,22 +548,26 @@ h1 {
 .title_show {
 	font-size: 36px!important;
 	text-align: center;
+	margin: -5px 0 0 0;
 }
 
 .white_box {
-	width: 1060px;
+	width: 100%;
 	min-height: 850px;
 	background-color: white;
 	border-radius: 10px;
-	position: relative;
 	box-shadow: 2px 1px 1px rgba(0,0,0,0.3);	
-	display: inline-block;
-	top: 70px;
-	left: 50%;
-	margin-left: -520px;
+	display: block;
+	margin: 0 auto 0 auto;
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 20px;
-	padding: 0 10px 0 10px;
+	padding: 0 0px 0 0px;
+	overflow: hidden;
+}
+
+.show_info {
+	padding: 0px 10px;
+	text-align: center;
 }
 
 .show_img {
@@ -571,9 +576,23 @@ h1 {
 	display: block;
 }
 
+.red_bg_fix {
+	width: 50%!important;
+	min-height: 100%;
+	height: auto;
+	padding: 10px 0 0 0;
+	margin: 0 auto 0 auto;
+}
+
+.float_left {
+	float: left;
+	width: 50%;
+}
+
 a.delete {
 	font-family:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: white;
+	padding: 0 8px;
 }
 
 a.title {
@@ -711,6 +730,17 @@ a.title {
 	text-align: center;
 }
 
+.title_block {
+	background-color: rgb(41, 128, 185) !important;
+	height: 140px;
+	width: 100%;
+	line-height: 140px;
+	color: white;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 0 0;
+}
+
 .left_welcome a {
 	color: white;
 	font-weight: 700;
@@ -782,6 +812,13 @@ hr {
 	display: none;
 }
 
+.file_input input {
+	box-shadow: none!important;
+	text-align: left!important;
+	background: none!important;
+	color: white;
+}
+
 /* START OF LANDING PAGE CSS */
 
 .blue_half {
@@ -790,6 +827,11 @@ hr {
 	width: 100%;
 	margin: 0;
 	min-height: 380px;
+}
+
+.blue_half .float_right {
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+	margin: 30px 10% 0 0;
 }
 
 .head_shadow {
@@ -835,8 +877,18 @@ hr {
 }
 
 .inner_container {
-	width: 50%;
+	width: 65%;
 	margin: 0 auto 0 auto;
+}
+
+.float_right {
+	float: right;
+	width: auto;
+	border-radius: 5px;
+	overflow: hidden;
+	top: 50%;
+	position: relative;
+	margin: 30px 0 0 0;
 }
 
 .logo_land h1 {
@@ -885,7 +937,7 @@ hr {
 	font-family: 'Lato', Helvetica, Arial, sans-serif;
 	font-size: 20px;
 	-webkit-appearance: none;
-  	-webkit-border-radius: 0;
+  	-webkit-border-radius: 0 5px 5px 0;
 }
 
 .beta_apply input:hover, .beta_apply input:focus {
@@ -981,6 +1033,12 @@ hr {
 
 .lighter {
 	font-weight: 300;
+}
+
+@media screen and (max-width: 1279px) {
+	.blue_half img {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 640px) {

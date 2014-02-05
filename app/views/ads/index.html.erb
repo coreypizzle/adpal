@@ -9,7 +9,6 @@
 
 <style type="text/css">
 .ads_link {
-  font-family: "Montserrat", Arial, sans-serif;
   font-weight: 700;
   color: white!important;
 }
@@ -40,7 +39,7 @@
 <div class="featured_container">
 <% @ads.each do |ad| %>
 
-<% if ad.size == "featured" %>
+<% if ad.size == nil %>
   <div class="afixdspace_grid_f">
     <div class="pic_sec_f">
       <%= image_tag ad.preview.url(:featured), :alt => "It seems you have adblocked, to view this ad please disable it." %>
